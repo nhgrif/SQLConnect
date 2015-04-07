@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A28039611AD49FA400974D2B /* libfreetds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A28039481AD49FA400974D2B /* libfreetds.a */; };
+		A28039631AD49FA400974D2B /* SQLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A28039541AD49FA400974D2B /* SQLConnection.m */; };
+		A28039651AD49FA400974D2B /* SQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A280395B1AD49FA400974D2B /* SQLManager.m */; };
+		A28039661AD49FA400974D2B /* SQLSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = A280395E1AD49FA400974D2B /* SQLSettings.m */; };
+		A280396D1AD4A0ED00974D2B /* SQLController.m in Sources */ = {isa = PBXBuildFile; fileRef = A280396A1AD4A0ED00974D2B /* SQLController.m */; };
+		A280396E1AD4A0ED00974D2B /* SQLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A280396C1AD4A0ED00974D2B /* SQLTableController.m */; };
+		A28039711AD4A0FC00974D2B /* SQLConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = A28039701AD4A0FC00974D2B /* SQLConnect.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A28039271AD49F1C00974D2B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A28039291AD49F1C00974D2B /* libSQLConnect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSQLConnect.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28039441AD49FA400974D2B /* bkpublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bkpublic.h; sourceTree = "<group>"; };
+		A28039451AD49FA400974D2B /* cspublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cspublic.h; sourceTree = "<group>"; };
+		A28039461AD49FA400974D2B /* cstypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstypes.h; sourceTree = "<group>"; };
+		A28039471AD49FA400974D2B /* ctpublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctpublic.h; sourceTree = "<group>"; };
+		A28039481AD49FA400974D2B /* libfreetds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfreetds.a; sourceTree = "<group>"; };
+		A28039491AD49FA400974D2B /* odbcss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = odbcss.h; sourceTree = "<group>"; };
+		A280394A1AD49FA400974D2B /* sqldb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqldb.h; sourceTree = "<group>"; };
+		A280394B1AD49FA400974D2B /* sqlfront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlfront.h; sourceTree = "<group>"; };
+		A280394C1AD49FA400974D2B /* sybdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sybdb.h; sourceTree = "<group>"; };
+		A280394D1AD49FA400974D2B /* syberror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syberror.h; sourceTree = "<group>"; };
+		A280394E1AD49FA400974D2B /* sybfront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sybfront.h; sourceTree = "<group>"; };
+		A280394F1AD49FA400974D2B /* tds_sysdep_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tds_sysdep_public.h; sourceTree = "<group>"; };
+		A28039531AD49FA400974D2B /* SQLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLConnection.h; sourceTree = "<group>"; };
+		A28039541AD49FA400974D2B /* SQLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLConnection.m; sourceTree = "<group>"; };
+		A28039551AD49FA400974D2B /* SQLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLConnectionDelegate.h; sourceTree = "<group>"; };
+		A28039561AD49FA400974D2B /* SQLErrorCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLErrorCodes.h; sourceTree = "<group>"; };
+		A280395A1AD49FA400974D2B /* SQLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLManager.h; sourceTree = "<group>"; };
+		A280395B1AD49FA400974D2B /* SQLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLManager.m; sourceTree = "<group>"; };
+		A280395D1AD49FA400974D2B /* SQLSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLSettings.h; sourceTree = "<group>"; };
+		A280395E1AD49FA400974D2B /* SQLSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLSettings.m; sourceTree = "<group>"; };
+		A28039691AD4A0ED00974D2B /* SQLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLController.h; path = SQLControllers/SQLController.h; sourceTree = "<group>"; };
+		A280396A1AD4A0ED00974D2B /* SQLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLController.m; path = SQLControllers/SQLController.m; sourceTree = "<group>"; };
+		A280396B1AD4A0ED00974D2B /* SQLTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQLTableController.h; path = SQLControllers/SQLTableController.h; sourceTree = "<group>"; };
+		A280396C1AD4A0ED00974D2B /* SQLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLTableController.m; path = SQLControllers/SQLTableController.m; sourceTree = "<group>"; };
+		A280396F1AD4A0FC00974D2B /* SQLConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLConnect.h; sourceTree = "<group>"; };
+		A28039701AD4A0FC00974D2B /* SQLConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLConnect.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A28039261AD49F1C00974D2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28039611AD49FA400974D2B /* libfreetds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A28039201AD49F1C00974D2B = {
+			isa = PBXGroup;
+			children = (
+				A280392B1AD49F1C00974D2B /* SQLConnect */,
+				A280392A1AD49F1C00974D2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A280392A1AD49F1C00974D2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A28039291AD49F1C00974D2B /* libSQLConnect.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A280392B1AD49F1C00974D2B /* SQLConnect */ = {
+			isa = PBXGroup;
+			children = (
+				A280396F1AD4A0FC00974D2B /* SQLConnect.h */,
+				A28039701AD4A0FC00974D2B /* SQLConnect.m */,
+				A28039681AD4A0AA00974D2B /* SQLControllers */,
+				A28039521AD49FA400974D2B /* SQLConnection */,
+				A28039591AD49FA400974D2B /* SQLManager */,
+				A280395C1AD49FA400974D2B /* SQLSettings */,
+				A28039431AD49FA400974D2B /* FreeTDS */,
+			);
+			path = SQLConnect;
+			sourceTree = "<group>";
+		};
+		A28039431AD49FA400974D2B /* FreeTDS */ = {
+			isa = PBXGroup;
+			children = (
+				A28039441AD49FA400974D2B /* bkpublic.h */,
+				A28039451AD49FA400974D2B /* cspublic.h */,
+				A28039461AD49FA400974D2B /* cstypes.h */,
+				A28039471AD49FA400974D2B /* ctpublic.h */,
+				A28039481AD49FA400974D2B /* libfreetds.a */,
+				A28039491AD49FA400974D2B /* odbcss.h */,
+				A280394A1AD49FA400974D2B /* sqldb.h */,
+				A280394B1AD49FA400974D2B /* sqlfront.h */,
+				A280394C1AD49FA400974D2B /* sybdb.h */,
+				A280394D1AD49FA400974D2B /* syberror.h */,
+				A280394E1AD49FA400974D2B /* sybfront.h */,
+				A280394F1AD49FA400974D2B /* tds_sysdep_public.h */,
+			);
+			path = FreeTDS;
+			sourceTree = "<group>";
+		};
+		A28039521AD49FA400974D2B /* SQLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				A28039531AD49FA400974D2B /* SQLConnection.h */,
+				A28039541AD49FA400974D2B /* SQLConnection.m */,
+				A28039551AD49FA400974D2B /* SQLConnectionDelegate.h */,
+				A28039561AD49FA400974D2B /* SQLErrorCodes.h */,
+			);
+			path = SQLConnection;
+			sourceTree = "<group>";
+		};
+		A28039591AD49FA400974D2B /* SQLManager */ = {
+			isa = PBXGroup;
+			children = (
+				A280395A1AD49FA400974D2B /* SQLManager.h */,
+				A280395B1AD49FA400974D2B /* SQLManager.m */,
+			);
+			path = SQLManager;
+			sourceTree = "<group>";
+		};
+		A280395C1AD49FA400974D2B /* SQLSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A280395D1AD49FA400974D2B /* SQLSettings.h */,
+				A280395E1AD49FA400974D2B /* SQLSettings.m */,
+			);
+			path = SQLSettings;
+			sourceTree = "<group>";
+		};
+		A28039681AD4A0AA00974D2B /* SQLControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A28039691AD4A0ED00974D2B /* SQLController.h */,
+				A280396A1AD4A0ED00974D2B /* SQLController.m */,
+				A280396B1AD4A0ED00974D2B /* SQLTableController.h */,
+				A280396C1AD4A0ED00974D2B /* SQLTableController.m */,
+			);
+			name = SQLControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A28039281AD49F1C00974D2B /* SQLConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A280393D1AD49F1C00974D2B /* Build configuration list for PBXNativeTarget "SQLConnect" */;
+			buildPhases = (
+				A28039251AD49F1C00974D2B /* Sources */,
+				A28039261AD49F1C00974D2B /* Frameworks */,
+				A28039271AD49F1C00974D2B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLConnect;
+			productName = SQLConnect;
+			productReference = A28039291AD49F1C00974D2B /* libSQLConnect.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A28039211AD49F1C00974D2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = nhg;
+				TargetAttributes = {
+					A28039281AD49F1C00974D2B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = A28039241AD49F1C00974D2B /* Build configuration list for PBXProject "SQLConnect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A28039201AD49F1C00974D2B;
+			productRefGroup = A280392A1AD49F1C00974D2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A28039281AD49F1C00974D2B /* SQLConnect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A28039251AD49F1C00974D2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28039661AD49FA400974D2B /* SQLSettings.m in Sources */,
+				A28039631AD49FA400974D2B /* SQLConnection.m in Sources */,
+				A280396D1AD4A0ED00974D2B /* SQLController.m in Sources */,
+				A280396E1AD4A0ED00974D2B /* SQLTableController.m in Sources */,
+				A28039651AD49FA400974D2B /* SQLManager.m in Sources */,
+				A28039711AD4A0FC00974D2B /* SQLConnect.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A280393B1AD49F1C00974D2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A280393C1AD49F1C00974D2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A280393E1AD49F1C00974D2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQLConnect/FreeTDS",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A280393F1AD49F1C00974D2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQLConnect/FreeTDS",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A28039241AD49F1C00974D2B /* Build configuration list for PBXProject "SQLConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A280393B1AD49F1C00974D2B /* Debug */,
+				A280393C1AD49F1C00974D2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A280393D1AD49F1C00974D2B /* Build configuration list for PBXNativeTarget "SQLConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A280393E1AD49F1C00974D2B /* Debug */,
+				A280393F1AD49F1C00974D2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A28039211AD49F1C00974D2B /* Project object */;
+}
