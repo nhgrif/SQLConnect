@@ -14,6 +14,7 @@
 		A280396D1AD4A0ED00974D2B /* SQLController.m in Sources */ = {isa = PBXBuildFile; fileRef = A280396A1AD4A0ED00974D2B /* SQLController.m */; };
 		A280396E1AD4A0ED00974D2B /* SQLTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = A280396C1AD4A0ED00974D2B /* SQLTableController.m */; };
 		A28039711AD4A0FC00974D2B /* SQLConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = A28039701AD4A0FC00974D2B /* SQLConnect.m */; };
+		A28039731AD4A2AD00974D2B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A28039721AD4A2AD00974D2B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		A280396C1AD4A0ED00974D2B /* SQLTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQLTableController.m; path = SQLControllers/SQLTableController.m; sourceTree = "<group>"; };
 		A280396F1AD4A0FC00974D2B /* SQLConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLConnect.h; sourceTree = "<group>"; };
 		A28039701AD4A0FC00974D2B /* SQLConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLConnect.m; sourceTree = "<group>"; };
+		A28039721AD4A2AD00974D2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		A28039201AD49F1C00974D2B = {
 			isa = PBXGroup;
 			children = (
+				A28039721AD4A2AD00974D2B /* README.md */,
 				A280392B1AD49F1C00974D2B /* SQLConnect */,
 				A280392A1AD49F1C00974D2B /* Products */,
 			);
@@ -218,6 +221,7 @@
 				A28039661AD49FA400974D2B /* SQLSettings.m in Sources */,
 				A28039631AD49FA400974D2B /* SQLConnection.m in Sources */,
 				A280396D1AD4A0ED00974D2B /* SQLController.m in Sources */,
+				A28039731AD4A2AD00974D2B /* README.md in Sources */,
 				A280396E1AD4A0ED00974D2B /* SQLTableController.m in Sources */,
 				A28039651AD49FA400974D2B /* SQLManager.m in Sources */,
 				A28039711AD4A0FC00974D2B /* SQLConnect.m in Sources */,
