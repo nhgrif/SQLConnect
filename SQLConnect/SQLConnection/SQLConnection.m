@@ -17,7 +17,7 @@ int const SQLConnectDefaultLoginTimeout = 5;
 int const SQLConnectDefaultExecuteTimeout = 5;
 
 NSString * const SQLConnectDefaultCharset = @"UTF-8";
-NSString * const SQLConnectWorkerQueueName = @"com.ability585.sqlconnect";
+NSString * const SQLConnectWorkerQueueName = @"com.importblogkit.sqlconnect";
 
 NSString * const SQLConnectRowIgnoreMessage = @"Ignoring unknown row type";
 
