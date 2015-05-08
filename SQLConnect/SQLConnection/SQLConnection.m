@@ -2,8 +2,10 @@
 //  SQLConnection.m
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import "SQLConnection.h"
@@ -39,9 +41,6 @@ typedef struct COL {
 
 //Handles error callback from FreeTDS library.
 int err_handler(DBPROCESS* dbproc, int severity, int dberr, int oserr, char* dberrstr, char* oserrstr) {
-#if DEBUG
-//    printf("err: %s\n",dberrstr);
-#endif
     if (dbproc) {
         __weak SQLConnection *sqlConnection = (__bridge SQLConnection*)(void*)dbgetuserdata(dbproc);
         [sqlConnection error:[NSString stringWithUTF8String:dberrstr] code:dberr severity:severity];
@@ -51,9 +50,6 @@ int err_handler(DBPROCESS* dbproc, int severity, int dberr, int oserr, char* dbe
 
 //Handles message callback from FreeTDS library.
 int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char* msgtext, char* srvname, char* procname, int line) {
-#if DEBUG
-//    printf("msg: %s\n",msgtext);
-#endif
     if (dbproc) {
         __weak SQLConnection *sqlConnection = (__bridge SQLConnection*)(void*)dbgetuserdata(dbproc);
         [sqlConnection message:[NSString stringWithUTF8String:msgtext]];
@@ -78,26 +74,14 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
             ];
 }
 
-//- (void)setDelegate:(NSObject<SQLConnectionDelegate> *)delegate {
-//    _delegate = delegate;
-//    if (!delegate) {
-//        if (_connection) {
-//            dbcanquery(_connection);
-//        }
-//    }
-//}
-
 #pragma mark dealloc
 - (void)dealloc {
-//#if DEBUG
-//    printf("--> SQLConnection dealloc %p\n",self);
-//#endif
     [[SQLManager manager] removeConnection:self];
 }
 
 #pragma mark Initializer methods
 // designated initializer
-- (id)initWithServer:(NSString *)server
+- (instancetype)initWithServer:(NSString *)server
             username:(NSString *)username
             password:(NSString *)password
             database:(NSString *)database
@@ -126,10 +110,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
             
             dberrhandle(err_handler);
             dbmsghandle(msg_handler);
-            
-//#if DEBUG
-//            NSLog(@"SQLConnection init: %p",self);
-//#endif
         } else {
             return nil;
         }
@@ -158,7 +138,7 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                                delegate:delegate];
 }
 
-- (id)initWithSettings:(SQLSettings *)settings delegate:(NSObject<SQLConnectionDelegate>*)delegate {
+- (instancetype)initWithSettings:(SQLSettings *)settings delegate:(NSObject<SQLConnectionDelegate>*)delegate {
     return [self initWithServer:settings.server
                        username:settings.username
                        password:settings.password
@@ -270,7 +250,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
 
 - (void)connectionFailure:(NSError*)error {
     // invoke delegate method on calling queue
-    
     [self.callbackQueue addOperationWithBlock:^{
         if (self.delegate) {
             [self.delegate sqlConnection:self connectionDidFailWithError:error];
@@ -317,9 +296,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
         
         // attempt to execute the statement
         if (dbsqlexec(_connection) == FAIL) {
-#if DEBUG
-            //NSLog(@"STATEMENT: %@", statement);
-#endif
             NSError *error = [NSError errorWithDomain:kSQL_ExecutionError
                                                  code:SQL_ExecutionError
                                              userInfo:@{@"Executing":statement}];
@@ -351,9 +327,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
             
             // handle allocation error
             if (columns == NULL) {
-#if DEBUG
-                //NSLog(@"STATEMENT: %@", statement);
-#endif
                 NSError *error = [NSError errorWithDomain:kSQL_ColumnStructFailedToInitialize
                                                      code:SQL_ColumnsStructFailedToInitialize
                                                  userInfo:@{@"Executing":statement}];
@@ -383,9 +356,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                 
                 // handle allocation error
                 if (pcol->dataBuffer == NULL) {
-#if DEBUG
-                    //NSLog(@"STATEMENT: %@", statement);
-#endif
                     NSError *error = [NSError errorWithDomain:kSQL_BufferFailedToAllocate
                                                          code:SQL_BufferFailedToAllocate
                                                      userInfo:@{@"Executing":statement}];
@@ -400,9 +370,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                 // bind column name
                 statusCode = dbbind(_connection, c, NTBSTRINGBIND, pcol->dataSize + 1, (BYTE*)pcol->dataBuffer);
                 if (statusCode == FAIL) {
-#if DEBUG
-                    //NSLog(@"STATEMENT: %@", statement);
-#endif
                     NSError *error = [NSError errorWithDomain:kSQL_ErrorBindingColumnName
                                                          code:SQL_ErrorBindingColumnName
                                                      userInfo:@{@"Executing":statement}];
@@ -417,9 +384,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                 // bind column status
                 statusCode = dbnullbind(_connection, c, &pcol->columnStatus);
                 if (statusCode == FAIL) {
-#if DEBUG
-                    //NSLog(@"STATEMENT: %@", statement);
-#endif
                     NSError *error = [NSError errorWithDomain:kSQL_ErrorBindingColumnStatus
                                                          code:SQL_ErrorBindingColumnStatus
                                                      userInfo:@{@"Executing":statement}];
@@ -466,9 +430,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                     }
                     // buffer full
                     case BUF_FULL: {
-#if DEBUG
-                        //NSLog(@"STATEMENT: %@", statement);
-#endif
                         NSError *error = [NSError errorWithDomain:kSQL_BufferFull
                                                              code:SQL_BufferFull
                                                          userInfo:@{@"Executing":statement}];
@@ -481,9 +442,6 @@ int msg_handler(DBPROCESS* dbproc, DBINT msgno, int msgstate, int severity, char
                     }
                     // error
                     case FAIL: {
-#if DEBUG
-                        //NSLog(@"STATEMENT: %@", statement);
-#endif
                         NSError *error = [NSError errorWithDomain:kSQL_RowReadError
                                                              code:SQL_RowReadError
                                                          userInfo:@{@"Executing":statement}];

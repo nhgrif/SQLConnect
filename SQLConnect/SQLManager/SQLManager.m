@@ -2,8 +2,10 @@
 //  SQLManager.m
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +16,7 @@
 
 @implementation NSMutableArray (WeakReferences)
 
-+ (id)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity {
++ (instancetype)mutableArrayUsingWeakReferencesWithCapacity:(NSUInteger)capacity {
     CFArrayCallBacks callbacks = {0, NULL, NULL, CFCopyDescription, CFEqual};
     
     return (__bridge id)(CFArrayCreateMutable(0, capacity, &callbacks));
@@ -30,7 +32,7 @@
     NSMutableArray *_managedConnections;
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _managedConnections = [NSMutableArray mutableArrayUsingWeakReferences];
@@ -56,9 +58,6 @@
     }
     
     [_managedConnections addObject:connection];
-//#if DEBUG
-//    printf("--> Open connections: %ld\n",(long)[SQLManager manager].connections);
-//#endif
     return YES;
 }
 
@@ -66,30 +65,12 @@
     [_managedConnections removeObject:connection];
     
     if ([_managedConnections count] == 0) {
-//#if DEBUG
-//        printf("*** SQLManager exiting...\n");
-//#endif
         dbexit();
     }
-    [self logOpenConnectionDelegates];
 }
 
-- (NSInteger)connections {
+- (NSInteger)connectionCount {
     return _managedConnections == nil ? 0 : [_managedConnections count];
-}
-
-- (void)logOpenConnectionDelegates {
-//#if DEBUG
-//    printf("*** Logging %ld connections...\n",(long)[self connections]);
-//    NSArray *printArray = [_managedConnections copy];
-//    for (id obj in printArray) {
-//        if ([obj isKindOfClass:[NSObject class]]) {
-//            NSString *desc = [(NSObject *)obj description];
-//            printf("    --> Open SQL connection: %s\n", [desc UTF8String]);
-//        }
-//    }
-//    printf("*** End connection log...\n");
-//#endif
 }
 
 @end

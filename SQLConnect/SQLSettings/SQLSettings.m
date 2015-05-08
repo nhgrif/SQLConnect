@@ -2,15 +2,17 @@
 //  SQLSettings.m
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import "SQLSettings.h"
 
 @implementation SQLSettings
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _server = @"";
@@ -31,8 +33,8 @@
         if (!defaultSettings) {
             defaultSettings = [SQLSettings settings];
         }
+        return defaultSettings;
     }
-    return defaultSettings;
 }
 
 @end

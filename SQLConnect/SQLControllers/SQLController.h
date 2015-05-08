@@ -1,12 +1,14 @@
 //
 //  SQLController.h
-//  Attachment Wizard
+//  SQLConnect
 //
-//  Created by Ability585 on 4/2/14.
-//  Copyright (c) 2014 Ability585. All rights reserved.
+//  Created by Nick Griffith on 3/17/14.
+//  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
-@import UIKit.UIViewController;
+#import <UIKit/UIKit.h>
 #import "SQLConnect.h"
 
 @interface SQLController : UIViewController <SQLConnectionDelegate>

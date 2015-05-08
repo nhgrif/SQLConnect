@@ -2,8 +2,10 @@
 //  SQLManager.h
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 // The class is not publicly visible outside the library.  It is used internally only.
@@ -15,9 +17,7 @@
 
 @interface SQLManager : NSObject
 
-@property (nonatomic,assign,readonly) NSInteger connections;
-
-- (void)logOpenConnectionDelegates;
+@property (nonatomic,assign,readonly) NSInteger connectionCount;
 
 /**
  *  Returns a initialized SQLManager instance as a singleton

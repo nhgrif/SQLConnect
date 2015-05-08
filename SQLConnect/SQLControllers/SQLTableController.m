@@ -1,9 +1,11 @@
 //
 //  SQLTableController.m
-//  Mobile585
+//  SQLConnect
 //
-//  Created by Ability585 on 4/25/14.
-//  Copyright (c) 2014 Ability585. All rights reserved.
+//  Created by Nick Griffith on 3/17/14.
+//  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import "SQLTableController.h"
@@ -69,7 +71,7 @@
 - (void)sqlConnection:(SQLConnection *)connection didReceiveServerError:(NSString *)error code:(int)code severity:(int)severity {
 #if DEBUG
     NSLog(@"SQL Error (%d): %@ - Severity: %d", code, error, severity);
-    NSLog(@"SQLController %@ - Open Connections: %ld", self, (long)[SQLManager manager].connections);
+    NSLog(@"SQLController %@ - Open Connections: %ld", self, (long)[SQLManager manager].connectionCount);
 #endif
     if (!__error_string) {
         __error_string = [NSMutableString string];

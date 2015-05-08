@@ -2,8 +2,10 @@
 //  SQLSettings.h
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 @import Foundation.NSObject;

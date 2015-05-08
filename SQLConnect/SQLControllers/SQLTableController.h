@@ -1,9 +1,11 @@
 //
 //  SQLTableController.h
-//  Mobile585
+//  SQLConnect
 //
-//  Created by Ability585 on 4/25/14.
-//  Copyright (c) 2014 Ability585. All rights reserved.
+//  Created by Nick Griffith on 3/17/14.
+//  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import <UIKit/UIKit.h>

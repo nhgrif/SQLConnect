@@ -2,8 +2,10 @@
 //  SQLConnection.h
 //  SQLConnect
 //
-//  Created by Nick Griffith on 3/16/14.
+//  Created by Nick Griffith on 3/17/14.
 //  Copyright (c) 2014 nhg. All rights reserved.
+//  https://github.com/nhgrif/SQLConnect
+//  http://importBlogKit.com
 //
 
 #import <Foundation/Foundation.h>
@@ -83,7 +85,7 @@
 
 #pragma mark Initializer methods
 
-- (id)init __attribute__((unavailable("Must initialize with a delegate")));
+- (instancetype)init __attribute__((unavailable("Must initialize with a delegate")));
 
 /**
  *  Returns a SQLConnection instance using the defaults defined in the SQLSettings defaultSettings object
@@ -105,11 +107,11 @@
  *
  *  @return SQLConnection object
  */
-- (id)initWithServer:(NSString*)server
-            username:(NSString*)username
-            password:(NSString*)password
-            database:(NSString*)database
-            delegate:(id<SQLConnectionDelegate>)delegate;
+- (instancetype)initWithServer:(NSString*)server
+                      username:(NSString*)username
+                      password:(NSString*)password
+                      database:(NSString*)database
+                      delegate:(NSObject<SQLConnectionDelegate>*)delegate;
 
 /**
  *  Returns a SQLConnection instance
@@ -136,7 +138,7 @@
  *
  *  @return SQLConnection object
  */
-- (id)initWithSettings:(SQLSettings*)settings delegate:(NSObject<SQLConnectionDelegate>*)delegate;
+- (instancetype)initWithSettings:(SQLSettings*)settings delegate:(NSObject<SQLConnectionDelegate>*)delegate;
 
 /**
  *  Returns a SQLConnection instance
