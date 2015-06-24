@@ -13,6 +13,8 @@
 #import "SQLConnectionDelegate.h"
 #import "SQLSettings.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SQLConnection : NSObject
 
 #pragma mark Properties
@@ -166,7 +168,11 @@
  *  @param database Required. The database name.
  *  @param charset  Optional. The charset to use.  Will default to preset charset if nil is passed.
  */
-- (void)connectToServer:(NSString *)server withUsername:(NSString *)username password:(NSString *)password usingDatabase:(NSString *)database charset:(NSString *)charset;
+- (void)connectToServer:(NSString *)server
+           withUsername:(NSString *)username
+               password:(NSString *)password
+          usingDatabase:(NSString *)database
+                charset:(NSString *)charset;
 
 /**
  *  Executes the provided SQL statement.  Results are handled via the delegate methods.
@@ -180,3 +186,5 @@
 
 
 @end
+
+NS_ASSUME_NONNULL_END

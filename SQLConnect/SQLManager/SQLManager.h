@@ -13,6 +13,8 @@
 
 @import Foundation.NSObject;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class SQLConnection;
 
 @interface SQLManager : NSObject
@@ -39,3 +41,5 @@
 - (void)removeConnection:(SQLConnection*)connection NS_REQUIRES_SUPER;
 
 @end
+
+NS_ASSUME_NONNULL_END

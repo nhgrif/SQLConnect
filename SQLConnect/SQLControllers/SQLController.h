@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "SQLConnect.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SQLController : UIViewController <SQLConnectionDelegate>
 
 - (void)viewDidLoad NS_REQUIRES_SUPER;
@@ -24,3 +26,5 @@
 - (void)sqlConnection:(SQLConnection *)connection executeDidFailWithError:(NSError *)error NS_REQUIRES_SUPER;
 
 @end
+
+NS_ASSUME_NONNULL_END

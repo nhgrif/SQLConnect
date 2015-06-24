@@ -11,6 +11,8 @@
 @import Foundation.NSObject;
 @import Foundation.NSString;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SQLSettings : NSObject
 
 /*
@@ -48,3 +50,5 @@
 @property (nonatomic,strong) NSString *database;
 
 @end
+
+NS_ASSUME_NONNULL_END

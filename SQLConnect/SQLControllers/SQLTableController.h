@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "SQLConnect.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SQLTableController : UITableViewController <SQLConnectionDelegate>
 
 - (void)viewDidLoad NS_REQUIRES_SUPER;
@@ -23,6 +25,6 @@
 - (void)sqlConnection:(SQLConnection *)connection didReceiveServerError:(NSString *)error code:(int)code severity:(int)severity NS_REQUIRES_SUPER;
 - (void)sqlConnection:(SQLConnection *)connection executeDidFailWithError:(NSError *)error NS_REQUIRES_SUPER;
 
-@property (nonatomic,assign) NSInteger recordCount;
-
 @end
+
+NS_ASSUME_NONNULL_END

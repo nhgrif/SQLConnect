@@ -10,13 +10,13 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const SQLCONNECTION_VERSION_NUM;
+extern NSString * __nonnull const SQLCONNECTION_VERSION_NUM;
 
 #import "SQLConnection.h"
 #import "SQLSettings.h"
 
-BOOL isNull(id obj);
-id nullReplace(id obj, id replacement);
+BOOL isNull(id __nullable obj);
+id __nullable nullReplace(id __nullable obj, id __nullable replacement);
 
 /*
  *  SQLConnect is an Objective-C wrapper for FreeTDS that will allow your iOS app
