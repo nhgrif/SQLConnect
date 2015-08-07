@@ -13,6 +13,8 @@
 @import Foundation.NSString;
 @import Foundation.NSArray;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class SQLConnection;
 
 @protocol SQLConnection <NSObject>
@@ -75,3 +77,5 @@
 @optional - (void)sqlConnection:(SQLConnection *)connection didReceiveServerError:(NSString*)error code:(int)code severity:(int)severity;
 
 @end
+
+NS_ASSUME_NONNULL_END
