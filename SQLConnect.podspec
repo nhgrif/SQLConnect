@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name                = "SQLConnect"
-  s.version             = "1.1.0"
+  s.version             = "1.2.0"
   s.summary             = "A library for connecting Objective-C & Swift apps to SQL Server"
   s.description         = <<-DESC
                             A library for connecting Objective-C & Swift apps to SQL Server
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.platform                = :ios, '8.0'
   s.ios.deployment_target   = '8.0'
   s.requires_arc            = true
-  s.source_files            = 'SQLConnect/*.{m,h}'
+  s.source_files            = 'SQLConnect/**/*.{m,h,a}'
 end
