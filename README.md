@@ -1,10 +1,6 @@
-TODO: some way of parameterizing queries
-
-TODO: make a real README for github
-
+TODO: improve this readme
 TODO: improve documentation, and provide some example usage
-
-
+TODO: some way of parameterizing queries
 
 Credits:
  - FreeTDS - http://www.freetds.org
