@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.requires_arc            = true
   s.source_files            = 'SQLConnect/**/*.{h,m}'
   s.vendored_libraries      = 'SQLConnect/FreeTDS/libfreetds.a'
-  s.xcconfig                = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/SQLConnect/FreeTDS/**"
+  s.xcconfig                = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/SQLConnect/FreeTDS/**" }
 end
