@@ -24,5 +24,6 @@ Pod::Spec.new do |s|
   s.source_files            = 'SQLConnect/**/*.{h,m}'
   s.preserve_paths          = 'SQLConnect/**/*.*'
   s.vendored_libraries      = 'SQLConnect/FreeTDS/libfreetds.a'
+  s.=libraries              = 'iconv'
   s.xcconfig                = { 'HEADER_SEARCH_PATHS' => "${PODS_ROOT}/#{s.name}/SQLConnect/**" }
 end
